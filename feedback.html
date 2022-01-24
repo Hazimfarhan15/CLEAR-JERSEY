@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style4.css">
+  
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="feedback.html">Feedback</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+	<li><a href="family.html">Contact Us</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+       
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+  <div class="about">
+ <div class="content">
+      <h1 style="color:white;"><center>FEEDBACK</H1>
+<center><p><font color ="white"> <div class="col l6 w3-padding-large">
+      <img src="adam.jpeg" class="-round -image -opacity-min" alt="Adam" style="width:65%">
+    </div>
+  </div>
+     <center><h4 style="color:white;">THE MATERIAL IS GREAT AND COMFORTABLE</h4>
+      <p style="color:white;">"The material used is really premium and it is so comfortable to wear during sport"- Adam Faris</p><br>
+    </div></center>
+	<center><div class="col l6 w3-padding-large">
+      <img src="baju saf.jpeg" class="-round -image -opacity-min" alt="baju saf" style="width:60%">
+    </div>
+  </div>
+<center>
+        <h4 style="color:white;">THE DESIGN WAS GREAT AND COLOURFUL</h4>
+     <p style="color:white;">"Clear Jersey has provide the best colourway for our team jersey with such a colourful design"- UiTM Students</p><br>
+     </div></center>
+<center>	
+    <div class="col l6 w3-padding-large">
+      <img src="medal.jpeg" class="-round -image -opacity-min" alt="Medal" style="width:55%">
+    </div>
+  </div>
+      <h4 style="color:white;">LONG LASTING MATERIAL</h4>
+      <p style="color:white;">"The design is great and eye catching with long lasting material used. Eventhough I wash the jersey using washing machine, the nameset and the design are still permanent"- Anas Zamani</p><br>
+    </div> </center>
+
+
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+<style>
+  body {
+    height: 100vh;
+  background: url("background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+</body>
+</html>

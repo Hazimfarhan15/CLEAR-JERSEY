@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html><head><tittle> CLEAR JERSEY</tittle>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEAR JERSEY </title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="index.html"> CLEAR JERSEY WEBSITE</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="feedback.html">Feedbacks</a></li>
+	<li><a href="contacs us.html">Contact Us</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+        
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+  <div class="about">
+ <div class="content">
+      <marquee><div class="title">WELCOME TO CLEAR JERSEY WEBSITE </div></marquee> 
+      <p>'WE PROVIDE PRINTING AND JERSEY DESIGN SERVICE,</p> 
+      <p> YOUR DESIRE IS OUR PRIORITY, </p> 
+      <p> THERE ARE PLENTY DESIGN TO CHOOSE FROM, SO HAVE A LOOK'.</p>
+    
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+<style>
+  body {
+    height: 100vh;
+  background: <div style="background-image: url(background.jpg);">
+ no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+</body>
+</html>

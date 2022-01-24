@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="style6.css">
+  
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="Gallery.html">GALLERY</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biodata.html">About Us</a></li>
+        <li><a href="education.html">Design</a></li>
+        <li><a href="experience.html">Feedbacks</a></li>
+	<li><a href="family.html">Contact Us</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+       
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+  <div class="about">
+ <div class="content">
+      <h1 style="color:white;">GALLERY</H1>
+
+<h1 style="color:white;"> SOME VIDEO OF OUR PRODUCTS</h1>
+<br>
+<embed src="printing jersi.mp4" autoplay="false"></embed>
+<br>
+<br>
+<h2 style="color:white;"> NEW DESIGN REALEASE</h2>
+<br>
+<br>
+<embed src="badminton.mp4" autoplay="false"></embed>
+<br>
+<br>
+<h2 style="color:white;">USER EXPERIENCE</h2>
+
+
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+<style>
+  body {
+    height: 100vh;
+  background: url("background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+</body>
+</html>

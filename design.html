@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="stylesheet" href="style3.css">
+  
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="design.html">DESIGN</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="feedback.html">Feedbacks</a></li>
+	<li><a href="family.html">Contact Us</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+        
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+  <div class="about">
+ <div class="content">
+<div class="row-padding-64" id="education">
+    <div class="col l6-padding-large">
+      <h1 class="center"style="color:white;">DESIGN </h1>
+  
+ <div class="col l6 w3-padding-large">
+      <img src="casual.jpeg" class="-round -image -opacity-min" alt="Casual" style="width:100%">
+    </div>
+  </div>
+     <center><h4 style="color:white;">CASUAL/RECREATION</h4>
+      <p style="color:white;">This are the design suitable for your daily routine. Starting from RM 40- RM50</p><br>
+    </div></center>
+	<div class="col l6 w3-padding-large">
+      <img src="futsal.JPEG" class="-round -image -opacity-min" alt="Futsal" style="width:100%">
+    </div>
+  </div>
+<center>
+        <h4 style="color:white;">FUTSAL TEAM</h4>
+     <p style="color:white;">>This are the design that are suitable for futsal team. Customs design-RM 40. Existing design-RM35</p><br>
+     </div></center>
+<center>	
+    <div class="col l6 w3-padding-large">
+      <img src="badminton.JPEG" class="-round -image -opacity-min" alt="Badminton" style="width:80%">
+    </div>
+  </div>
+      <h4 style="color:white;">BADMINTON SQUAD</h4>
+      <p style="color:white;">Design often used by badminton players and team. Customs design- RM40. Existing design- RM30</p><br>
+    </div> </center>
+	
+
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+<style>
+  body {
+    height: 100vh;
+  background: url("background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+</body>
+</html>
+
+ 
